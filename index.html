@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Welcome to my portfolio website!">
+    <meta name="author" content="Jitender Singh Chhapola">
+
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio - Jitender Singh Chhapola" />
+    <meta property="og:description" content="Welcome to my portfolio!" />
+    <meta property="og:image" content="./assets/img/preview.png" />
+    <title>Jitender Singh Chhapola</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Font Awesome icons (free version)-->
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Fonts CSS-->
+    <link rel="stylesheet" href="css/heading.css">
+    <link rel="stylesheet" href="css/body.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+        .button {
+            background-color: #ffffff;
+            /* white */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 15px;
+            font-size: 16px;
+        }
+
+        .link:link {
+            background-color: white;
+        }
+
+        .link:hover {
+            background-color: lightgreen;
+        }
+
+        .link:active {
+            background-color: hotpink;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        .about {
+            margin-top: 4%;
+        }
+
+        .aboutus {
+            display: inline-table;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skills {
+            padding: 15px 20px;
+            font-size: 28px;
+            margin-left: -20px;
+            font-family: 'Slabo 27px', serif;
+            font-weight: 700;
+
+        }
+
+        .skills.colo {
+            color: black;
+        }
+
+        .skills-items {
+            padding: 5px 15px;
+            font-size: 20px;
+            display: inline-flex;
+            background: rgba(255, 255, 255, .1);
+            color: rgb(4, 65, 7);
+            font-size: 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+            background-color: wheat;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            font-weight: 600;
+        }
+
+        .timeline-content .date {
+            color: rgb(19, 11, 24);
+        }
+
+        .timeline-content .date {
+            padding-top: 20px;
+        }
+
+        .edu-content .timeline-content::before {
+            content: '';
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            position: absolute;
+            background: rgb(236, 235, 236);
+            z-index: -2;
+            margin-left: -24px;
+            margin-top: 5px;
+        }
+
+        .edu-content {
+            margin-left: 20px;
+        }
+
+        .edu-content .timeline::before {
+            content: '';
+            height: 250px;
+            width: 2px;
+            position: absolute;
+            background: rgb(83, 36, 60);
+            z-index: -2;
+            object-fit: contain;
+        }
+
+        .edu-content .timeline::before {
+            height: 500px;
+        }
+
+        .hhome {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            position: relative;
+            align-items: center;
+            justify-content: space-evenly;
+            background: rgba(8, 100, 62, 0.2);
+            border-radius: 30px;
+            margin-bottom: 40px;
+        }
+
+        .hhomeabout {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            position: relative;
+            align-items: center;
+            justify-content: space-evenly;
+            background: rgba(2, 120, 62, 0.2);
+            border-radius: 20px;
+        }
+
+        .hhomeabout.active {
+            display: block;
+        }
+
+        .hhome.active {
+            display: block;
+        }
+
+        .home_body {
+            width: auto;
+            margin-top: 20px;
+            height: auto;
+            display: grid;
+            grid-template-rows: 100vh;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-evenly;
+        }
+
+        .imgdiv {
+            display: grid;
+            justify-items: center;
+            align-content: center;
+        }
+
+        .imgdiv img {
+            width: 350px;
+            height: 350px;
+            border: 4px solid white;
+            border-radius: 205px;
+            margin-top: 20px;
+        }
+
+        .name {
+            justify-content: center;
+            align-content: center;
+            display: grid;
+            font-size: 40px;
+        }
+
+        button {
+            font-size: 25px;
+            font-weight: 700;
+            border: none;
+            margin-top: 10px;
+            background: transparent;
+            color: Black;
+            border-bottom: 2px solid black;
+
+        }
+
+        .aboutus {
+            height: auto;
+            width: 100%;
+            font-size: 40px;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .hoverimage {
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .about {
+            display: grid;
+            margin: 20px;
+            font-size: 20px;
+            margin-top: 80px;
+        }
+
+        .image img {
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .image {
+            height: 355px;
+            box-sizing: border-box;
+            display: grid;
+            position: relative;
+        }
+
+        .image .tree {
+            background: rgba(124, 62, 62, 0.2);
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            z-index: 3;
+            top: 69%;
+            padding: 30px 20px;
+            transform: translateZ(100px) scaleY(0);
+            transform-origin: top;
+            transition: 0.5s;
+            border-bottom-left-radius: 14px;
+            border-bottom-right-radius: 14px;
+            transform-style: preserve-3d;
+        }
+
+        .tree .icon {
+            align-items: center;
+            justify-content: center;
+            margin-left: 22%;
+            margin-top: 10px;
+        }
+
+        .tree .icon a:hover {
+            color: #ffff00;
+        }
+
+        .image:hover .tree {
+            transform: translateZ(100px) scaleY(1);
+        }
+
+        .icon a {
+            color: white;
+            margin: 2px;
+        }
+
+        .tree .icon {
+            align-items: center;
+            justify-content: center;
+            margin-left: 12%;
+            margin-top: 7px;
+            font-size: 35px;
+        }
+
+        .image .tree {
+            height: 96px;
+        }
+
+        .navbar {
+            height: 80px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* Adjust the styles for smaller screens */
+
+            .name {
+                font-size: 30px;
+                /* Adjust the font size for smaller screens */
+            }
+
+            hhome {
+                grid-template-columns: 1fr;
+                /* Adjust the grid layout for smaller screens */
+                grid-template-rows: auto;
+                /* Adjust the grid layout for smaller screens */
+            }
+
+            .home_body {
+                grid-template-columns: 1fr;
+                /* Adjust grid layout for smaller screens */
+                text-align: center;
+                /* Center align content */
+                grid-template-rows: auto;
+                /* Adjust the grid layout for smaller screens */
+            }
+
+            .imgdiv img {
+                width: 210px;
+                /* Adjust image size for smaller screens */
+                height: 210px;
+                margin-top: 70px;
+            }
+
+            .image img {
+                width: 250px;
+                /* Adjust the image size for smaller screens */
+                height: 250px;
+            }
+
+            .aboutus {
+                grid-template-columns: 1fr;
+                /* Adjust the grid layout for smaller screens */
+                font-size: 20px;
+                /* Adjust the font size for smaller screens */
+            }
+
+            .about {
+                margin-top: 10px;
+                /* Adjust the margin for smaller screens */
+            }
+
+            .skills {
+                font-size: 20px;
+                /* Adjust the font size for smaller screens */
+            }
+
+            .skills-items {
+                font-size: 16px;
+                /* Adjust the font size for smaller screens */
+            }
+
+            .timeline-content {
+                font-size: 16px;
+                /* Adjust the font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Jitender Singh Chhapola</a>
+            <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded"
+                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#portfolio">PROJECTS</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#achivements">ACHIEVEMENTS</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#extra">EXTRACURRICULAR</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="hhome active " id="home">
+        <div class="home_body">
+            <div class="imgdiv">
+                <img src="assets/img/circle.png">
+            </div>
+            <div class="name">
+                <p>Namaste World!</p>
+                <h2><a title="Resume"
+                        href="https://drive.google.com/file/d/1uATnSamz1-j3Dv6sq6CD81sW2jPXTGDn/view?usp=sharing"
+                        target="_blank">Jitender Singh Chhapola</a></h2>
+                <p>Software Developer</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PROJECTS</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->              
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <a href="" target="_blank" class="card-link">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="assets/img/LittlePhone.png" alt="LittlePhone">
+                                <div class="card-body">
+                                    <h5 class="card-title">LittlePhone</h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-primary">Android</span>
+                                        <span class="badge badge-warning">JAVA</span>
+                                        <span class="badge badge-primary">XML</span>
+                                    </p>
+                                    <p class="card-text">Android Finding App</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <a href="https://www.jitendersinghchhapola.com/portfolio" target="_blank" class="card-link">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="assets/img/Portfolio.png" alt="My Portfolio">
+                                <div class="card-body">
+                                    <h5 class="card-title">My Portfolio</h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-primary">JavaScript</span>
+                                        <span class="badge badge-warning">HTML/CSS</span>
+                                    </p>
+                                    <p class="card-text">My Portfolio.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <a href="https://www.instagram.com/share._quote/" target="_blank" class="card-link">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="assets/img/ShareQuote.png" alt="Share Quote">
+                                <div class="card-body">
+                                    <h5 class="card-title">Share Quote</h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-primary">Python</span>
+                                        <span class="badge badge-warning">Selenium</span>
+                                        <span class="badge badge-warning">Instagram Private API</span>
+                                    </p>
+                                    <p class="card-text">An automated Instagram Profile</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <a href="https://github.com/niteshjitender/AndroidLearning/tree/main/AnimalX" target="_blank" class="card-link">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="assets/img/AnimalX.png" alt="Animal X">
+                                <div class="card-body">
+                                    <h5 class="card-title">Animal X</h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-primary">Android</span>
+                                        <span class="badge badge-warning">Java</span>
+                                        <span class="badge badge-primary">XML</span>
+                                    </p>
+                                    <p class="card-text">An app for tracking details of injured animals</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section Heading-->
+    <section class="page-section" id="">
+        <div class="text-center">
+            <h2 class="page-section-heading d-inline-block text-Black">ABOUT</h2>
+        </div>
+
+        <div class="hhomeabout about_us " id="about">
+
+            <div class="aboutus">
+
+                <div class="hoverimage">
+                    <div class="image">
+                        <img src="assets/img/circle.png" alt="MyImage"width="350px" height="350px">
+
+                    </div>
+                </div>
+                <div class="about">
+
+                    <div class="text-center ">
+                        <p class="pre-wrap lead" style="color: black;">Experienced Full-Stack Developer with over 3
+                            years of hands-on development.
+                            Successfully delivered 6+ projects using Java, Spring Boot, Angular, and Node.js.
+                            Enhanced system performance by 25% and collaborated effectively within agile teams of 6-10
+                            developers.
+                            Skilled in backend and frontend development, database management, and DevOps, I am dedicated
+                            to building scalable and maintainable software solutions.</p>
+                    </div>
+
+                    <div class="skills colo">
+                        <p> Skills</p>
+                        <div class="skills-items">Spring Boot/ MVC/ GRADLE</div>
+                        <div class="skills-items">Angular</div>
+                        <div class="skills-items">Nodejs</div>
+                        <div class="skills-items">Express</div>
+                        <div class="skills-items">MongoDB</div>
+                        <div class="skills-items">Postgres SQL</div>
+                        <div class="skills-items">Kafka</div>
+                        <div class="skills-items">Redis</div>
+                        <div class="skills-items">Elasticsearch</div>
+                        <div class="skills-items">MySql</div>
+                        <div class="skills-items">Docker</div>
+                        <div class="skills-items">Docker</div>
+                        <div class="skills-items">Kubernetes</div>
+                        <div class="skills-items">JAVA</div>
+                        <div class="skills-items">Typescript</div>
+                        <div class="skills-items">C/C++</div>
+                        <div class="skills-items">HTML/CSS</div>
+                        <div class="skills-items">Scripting</div>
+                        <div class="skills-items">Swagger</div>
+                        <div class="skills-items">OOPS</div>
+                        <div class="skills-items">Data Structures/Algorithms</div>
+                        <div class="skills-items">REST API</div>
+                        <div class="skills-items">Microservices</div>
+                        <div class="skills-items">Photoshop</div>
+                        <div class="skills-items">GIT/SVN</div>
+                        <div class="skills-items">System Design</div>
+                        <div class="skills-items">Design patterns</div>
+
+                    </div>
+                    <div class="edu-button">
+                        <button type="button" class="education" data-target="#">Education</button>
+                    </div>
+                    <div class="edu-content">
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <span class="date">2017-2021</span>
+                                <h3>Bachelor of Engineering-<span>Indian Institute of Information Technology, Sonepat</span>
+                                </h3>
+                                <h5>Information Technology</h5>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="date">2016</span>
+                                <h3>Kendriya Vidyalaya No.1, A.F.S, Sirsa</h3>
+                                <h5>12th Science</h5>
+                                <h5>Sirsa/h5>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="date">2014</span>
+                                <h3>Kendriya Vidyalaya No.1, A.F.S, Sirsa</h3>
+                                <h5>Class 10th </h5>
+                                <h5>Sirsa</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-random"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+    </section>
+
+    <section class="page-section text-black mb-0" style="background: rgba(2, 120, 62, 0.2);" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="page-section-heading d-inline-block text-white">EXPERIENCE</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-random"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p style="text-align:center ;" class="pre-wrap lead "><b>Software Developer</b></p>
+            <p style="text-align:center ;" class="pre-wrap lead"><b>AJIO (JIO PRIVATE LTD.)</b></p>
+            <p style="text-align:center ;" class="pre-wrap lead"><b>March-2023 - Present, Bengaluru , Karnataka, India
+                </b></p>
+            <p style="text-align:left" class="lead">
+                <b>Technology Stack:</b> Java, Spring-Boot, MongoDB, GIT, Kafka, Rest API, Node.js, Typescript,
+                Docker</br></br>
+                1)<b>Optimized Deployment:</b> Dockerized AjioAds microservice and deployed it in Kubernetes pods,
+                improving scalability and deployment efficiency.</br></br>
+                2)<b>Enhanced Customer Engagement:</b> Developed features for creating posts and stories in Ajiogram
+                using Spring Boot, MongoDB, Redis, and Kafka, boosting engagement with brands by around 30%.</br></br>
+                3)<b>Increased Ad Sales:</b> Implemented a bulk upload feature for AjioAds, allowing sellers to run ads,
+                resulting in a 25% increase in ad sales.</br></br>
+                4)<b>Approval Flow:</b> Designed and developed the LLD of approval flow for sellers from scratch,
+                enhancing the efficiency of the approval process.</br></br>
+                5)<b>Revamped Seller Onboarding:</b> Developed microservices in Ajio with Node.js, TypeScript, Express,
+                MongoDB, and Kafka, reducing onboarding time.</br></br>
+            </p>
+            </br>
+
+            <p style="text-align:center ;" class="pre-wrap lead "><b>Full Stack Software Developer</b></p>
+            <p style="text-align:center ;" class="pre-wrap lead"><b>Interra Systems</b></p>
+            <p style="text-align:center ;" class="pre-wrap lead"><b>July-2021 - March-2023, Noida, UP, India </b></p>
+
+            <p style="text-align:left" class="lead">
+            <p style="text-align:left" class="lead">
+                <b>Technology Stack:</b> Java, Spring-Boot, Angular, Postgres, Kafka, Elasticsearch, Redis, Webhooks,
+                RHEL</br></br>
+                1)<b>Full-Stack Development:</b> Designed and developed full-stack components using Spring Boot and
+                Angular, integrating with Postgres, Kafka, Elasticsearch, and Redis for seamless script selection and
+                execution.</br></br>
+                2)<b>Real-Time Integration:</b> Authored scripts for real-time data integration with Slack, SNMP, and
+                Msteams via webhooks, enabling flexibility with separate jar files. Benefiting 7+ clients.</br></br>
+                3)<b>UI/UX Enhancement:</b> Developed new Angular components for customer-facing web applications,
+                enhancing the overall user experience.</br></br>
+                4)<b>Linux Deployment:</b> Managed deployment on customer machines, resolving compatibility issues and
+                RPM build and installation.</br></br>
+            </p>
+            <br>
+
+            <p style="text-align:center ;" class="pre-wrap lead "><b>AI Software Developer(Intern)</b></p>
+            <p style="text-align:center ;" class="pre-wrap lead"><b>Cerebry</b></p>
+            <p style="text-align:center ;" class="pre-wrap lead"><b>Jan-2020 - June-2020, Faridabad, Haryana, India </b></p>
+
+            <p style="text-align:left" class="lead">
+                <p style="text-align:left" class="lead">
+                    <b>Technology Stack:</b>b? Prolog, Python, CHR, Selenium</br></br>
+                    1)<b>Question Generation:</b> Designed automated question set generation using Prolog, Python, and CHR.</br></br>
+                    2)<b>Latex Writing Automation:</b> Created a Python and Selenium script reducing latex writing effort by 40%.</br></br>
+                    3)<b>Error Detection:</b> Developed a Python and Selenium script to detect and display errors in final outputs efficiently.</br></br>
+                </p>
+    
+        </div>
+    </section>
+
+
+    <section class="page-section" id="achivements">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-secondary d-inline-block mb-0">ACHIEVEMENTS & CERTIFICATIONS</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-anchor"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- About Section Content-->
+            <div>
+                <p class="pre-wrap lead">
+                    1) Android Application Development (Udemy)
+                </p>
+                <p class="pre-wrap lead">
+                    2) SQL (Udemy).
+                </p>
+                <p class="pre-wrap lead">
+                    3) Web Scraping (Udemy).
+                </p>
+                <p class="pre-wrap lead">
+                    4) Correction in the documentation of PostgreSQL <a href="https://drive.google.com/file/d/1cZelRx4DT257VI3IuwwRwgt3MhMjxLVp/view?usp=sharing">tutorial</a>.
+                </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="page-section text-black mb-0" style="background: rgba(2, 120, 62, 0.2);" id="extra">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-secondary d-inline-block mb-0">Extracurricular Activities</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa fa-cubes " aria-hidden="true"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="pre-wrap lead">
+                1) KVS Science National (Participated)
+            </p>
+            <p class="pre-wrap lead">
+                2) KVS National Sports Meet (Participated as Judo Player)
+            </p>
+            <p class="pre-wrap lead">
+                3) Inter-NIT Sports Meet (Participated in High Jump)
+            </p>
+        </div>
+    </section>
+
+
+    <section id="morelinks">
+        <div class="container">
+            <!-- About Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading d-inline-block">More Links</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa fa-users"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="text-center">
+                <p class="pre-wrap ">
+                    1) LeetCode <a href="https://leetcode.com/u/niteshjitender/" class="link" target="_blank"> <i
+                            class="fa fa-plane" aria-hidden="true"></i></a>
+                </p>
+                <p class="pre-wrap ">
+                    2) Interviewbit <a href="https://www.interviewbit.com/profile/nitesh-jitender/" class="link" target="_blank"> <i
+                            class="fa fa-plane" aria-hidden="true"></i></a>
+                </p>
+                <p class="pre-wrap ">
+                    3) HackerRank <a href="https://www.hackerrank.com/profile/niteshjitender" class="link" target="_blank"> <i
+                            class="fa fa-plane" aria-hidden="true"></i></a>
+                </p>
+                <p class="pre-wrap ">
+                    4) GitHub <a href="https://github.com/niteshjitender" class="link" target="_blank"><i
+                            class="fa fa-plane" aria-hidden="true"></i></a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact-->
+    <section class="page-section text-black mb-0" style="background: rgba(2, 120, 62, 0.2);" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-phone"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Content-->
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="tel:+91-9406815130">
+                            <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+                        </a>
+                        <div class="text-muted">Phone</div>
+                        <div class="lead font-weight-bold"><a href="tel:+91-9406815130">+91-8901567825</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="mailto:divyanshagrawal532@gmail.com">
+                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                        </a>
+                        <div class="text-muted">Email</div><a class="lead font-weight-bold"
+                            href="mailto:divyanshagrawal532@gmail.com">niteshjitender@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class=" bg-primary text-white mb-0" id="morelinks">
+        <h2></h2>
+
+    </section>
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="mb-4"></h4>
+                    <p class="pre-wrap lead mb-0"> </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="mb-4">AROUND THE WEB</h4>
+                    <a target="_blank" href="https://www.linkedin.com/in/jitender-singh-chhapola/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/niteshjitender/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="blank" href="https://www.instagram.com/niteshjitender">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="blank" href="https://github.com/niteshjitender">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="blank" href="https://x.com/niteshjitender">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="mb-4"></h4>
+                    <p class="pre-wrap lead mb-0"> </p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- Copyright Section-->
+    <section class="copyright py-4 text-center text-white">
+        <div class="container"><small class="pre-wrap"> | Developed By Jitender Singh Chhapola | 2024 </a></small></div>
+
+
+    </section>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    <div class="scroll-to-top d-lg-none position-fixed"><a
+            class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
+                class="fa fa-chevron-up"></i></a></div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- GitHub buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>
